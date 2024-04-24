@@ -1,0 +1,20 @@
+.header{
+    height: 95vh;
+    color: $color-white;
+    background-image: linear-gradient(to right bottom ,rgba($color-primary-light,0.5),rgba($color-primary-light,0.6) )  , url(../images/herotry.jpg) ; /*two imges, and gradient is on top  img below */
+    background-size: cover;       /* what is the width of bg always try to fit in that*/
+    background-position: top;   /*Background img from top always remain same if we resiz   || bottom, center    see in dev tools by changing values*/
+    position: relative;         /*As it parent to logo-box so that is position relative to this*/    
+    /* This is used for curve live in header 75vh is given for responsivity */
+
+    &__text-box{
+        width: 73rem;
+        /* centering the whole hadding */
+        position: absolute;
+        top: 65%;     
+        left: 50%;
+        /* this will translate the box into of its own length and width,  */
+        transform: translate(-50%, -50%);
+        text-align: center;     /*As& is there in inline-block so it is treated as a normal text so this will centr it*/
+    }
+}

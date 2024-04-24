@@ -1,0 +1,44 @@
+.row{
+    max-width: $grid-width; //this is standerd
+    margin: 0 auto;  //this is trick to center a block element inside another block element
+    
+    &:not(:last-child){
+        margin-bottom: $gutter_vartical;
+    }
+    @include clearfix;
+
+    [class^="col-"]{
+        float: left;
+        &:not(:last-child){
+            margin-right: $gutter_horizental;
+        }
+    }
+
+    .col-1-of-2{
+        width: calc((100% - #{$gutter_horizental})/2);
+    }
+    .col-1-of-3{
+        width: calc((100% - 2*#{$gutter_horizental})/3);
+    }
+
+    .col-2-of-3 {
+        width: calc(2 * ((100% - 2 * #{$gutter_horizental}) / 3) + #{$gutter_horizental});
+    }
+   
+    .col-1-of-4{
+        width: calc((100% - 3*#{$gutter_horizental})/4);
+    }
+    .col-2-of-4{
+        width: calc(2 * ((100% - 3 * #{$gutter_horizental}) / 4) + #{$gutter_horizental});
+    }
+    .col-3-of-4{
+        width: calc(3 * ((100% - 3 * #{$gutter_horizental}) / 4) + 2* #{$gutter_horizental});
+    }
+
+    .col-1-of-5{
+        width: calc((100% - 4*#{$gutter_horizental})/5);
+    }
+    .col-1-of-6{
+        width: calc((100% - 5*#{$gutter_horizental})/6);
+    }
+}

@@ -1,0 +1,65 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    
+    font-weight: 400;
+    font-size: $default-fount-size;
+    color: $color-default-font;
+}
+
+
+.heading-primary{
+    color: $color-white;
+    margin-bottom: 4rem ;
+   
+        font-size: 4.4rem;             
+        font-weight: 600;
+
+        &--sub{
+            color: $color-primary-light;
+        }  
+    }
+
+
+.heading-quaternary{
+    font-size: 2rem;   
+    font-weight: 400;          
+    margin-bottom: 4rem ;
+
+
+}
+
+
+// .heading-secondary{
+//     font-size: 3.5rem;
+//     text-transform: uppercase;
+//     font-weight: 700;
+//     //applying color gradient on text
+//     display: inline-block;
+//     background-image: linear-gradient(to right , $color-primary-light,$color-primary-dark);
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     color: transparent;
+     
+//     letter-spacing: 2px;
+//     transition: all .2s;
+//     &:hover{
+//         transform: skewY(2deg) skewX(15deg) scale(1.2);
+//         text-shadow: 1rem 1.5rem 2rem rgba($color-black, .2) ;
+//     }
+
+// }
+
+// .heading-tertiary{
+//     font-size:$default-fount-size ;
+//     font-weight: 700;
+//     text-transform: uppercase;
+
+// }
+// .paragraph{
+//     font-size: $default-fount-size;
+//     &:not(:last-child){
+//         margin-bottom: 3rem;
+//     }

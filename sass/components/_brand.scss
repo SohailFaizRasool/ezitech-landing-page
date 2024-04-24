@@ -1,0 +1,15 @@
+.brand{
+    &__logo-box{
+        
+    }
+    &__logo{
+        width: 25rem;
+        display: inline-block;
+        // padding: rem;
+        &-3{
+            position: relative;
+            top: -3.7rem;
+        }
+    }
+    
+}

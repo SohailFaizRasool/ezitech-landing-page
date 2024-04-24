@@ -1,0 +1,48 @@
+.search{
+
+
+    &-box{
+        margin-bottom: 3rem;
+    }
+
+    &__input{
+        font-family: inherit; //by default browser does not apply font family on input
+        color: $color-black;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 4px;
+        background-color: $color-white;
+        border: none; 
+        width: 50%;
+        padding-right: 3rem;
+        
+        transition: all .2;
+        &:focus{
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(#000, .1);
+
+            
+        }
+
+
+    }
+
+    &__logo{
+        display: inline-block;
+        color: rgba(#000, .1);
+        font-weight: 800;
+        transform: translateX(-3rem);
+        transition: all .7s;
+
+        &:hover{
+        color: rgba(#000, 1);
+
+        }
+
+        
+    }
+
+   
+}
+
+

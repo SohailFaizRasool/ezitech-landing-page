@@ -1,0 +1,208 @@
+*,
+*::after,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/* Converting all font sizes in rem TRICK */
+html {
+  /* 
+    font-size: 10px;  I selected 10px because its easy to calculate in ram for all the browser
+    but this is not good to fix root size
+    100% of root=16 = 16 px
+    but we always need here 10 px. How it should be possible
+    10/16*100= 62.5%
+    */
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #273044; }
+
+.heading-primary {
+  color: #fff;
+  margin-bottom: 4rem;
+  font-size: 4.4rem;
+  font-weight: 600; }
+  .heading-primary--sub {
+    color: #649ff7; }
+
+.heading-quaternary {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 4rem; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-bottom-huge {
+  margin-bottom: 10rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.u-display-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.row {
+  max-width: 120rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 6rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem)/2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2*6rem)/3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3*6rem)/4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2* 6rem); }
+  .row .col-1-of-5 {
+    width: calc((100% - 4*6rem)/5); }
+  .row .col-1-of-6 {
+    width: calc((100% - 5*6rem)/6); }
+
+.header {
+  height: 95vh;
+  color: #fff;
+  background-image: linear-gradient(to right bottom, rgba(100, 159, 247, 0.5), rgba(100, 159, 247, 0.6)), url(../images/herotry.jpg);
+  /*two imges, and gradient is on top  img below */
+  background-size: cover;
+  /* what is the width of bg always try to fit in that*/
+  background-position: top;
+  /*Background img from top always remain same if we resiz   || bottom, center    see in dev tools by changing values*/
+  position: relative;
+  /*As it parent to logo-box so that is position relative to this*/
+  /* This is used for curve live in header 75vh is given for responsivity */ }
+  .header__text-box {
+    width: 73rem;
+    /* centering the whole hadding */
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    /* this will translate the box into of its own length and width,  */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /*As& is there in inline-block so it is treated as a normal text so this will centr it*/ }
+
+.bar {
+  width: 100vw;
+  padding: 1rem 11rem;
+  background-color: #326ec9;
+  color: #fff;
+  font-size: 1rem; }
+  .bar::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .bar__section {
+    display: inline-flex;
+    align-items: center;
+    float: right;
+    padding: 0 3rem; }
+  .bar__icon {
+    margin-right: 12px; }
+
+.nav {
+  background-color: transparent;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid #fff; }
+  .nav__logo {
+    width: 15rem; }
+  .nav__link-box {
+    display: flex; }
+  .nav__itom {
+    text-align: center;
+    list-style: none;
+    margin: 0 1.5rem;
+    padding: 1rem;
+    display: inline-block; }
+  .nav__link {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: inherit;
+    transition: all .3s; }
+    .nav__link:hover {
+      color: #649ff7; }
+  .nav__right-box {
+    display: inline-block;
+    padding: .5rem;
+    margin-left: 2rem;
+    border-left: 1px solid #fff;
+    display: flex; }
+  .nav__icon {
+    padding: 1rem 1rem; }
+    .nav__icon-heart {
+      padding: 1.4rem; }
+    .nav__icon-search {
+      border: 4px solid #fff; }
+
+.search-box {
+  margin-bottom: 3rem; }
+
+.search__input {
+  font-family: inherit;
+  color: #000;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 4px;
+  background-color: #fff;
+  border: none;
+  width: 50%;
+  padding-right: 3rem;
+  transition: all .2; }
+  .search__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
+
+.search__logo {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.1);
+  font-weight: 800;
+  transform: translateX(-3rem);
+  transition: all .7s; }
+  .search__logo:hover {
+    color: black; }
+
+.brand__logo {
+  width: 25rem;
+  display: inline-block; }
+  .brand__logo-3 {
+    position: relative;
+    top: -3.7rem; }
