@@ -1,0 +1,72 @@
+
+.btn{
+    &,
+    &:link,
+    &:visited{               /*orugnal */
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        display: inline-block;
+        border-radius: 4px;
+        transition: all 0.2s;       /*THIS IS ALSO USED for animation*/
+    
+        // position: relative;
+
+        //changing for <button> attribute
+        border: none;
+        cursor: pointer;
+    }
+    &:hover{                    /*when hover*/
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);      /* x y blurr color */
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6 );          /*1.5 times of actual after sudo element*/
+            opacity: 0;
+        }
+    }
+    &:active
+    {                  /*clicked*/
+        outline: none;
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 2rem;      /* x y blurr color*/
+    
+    }
+   
+
+    &--blue{
+        background: $color-primary-dark;
+        color: $color-white;
+    }
+    
+
+    &--animated{
+        animation: moveInBottom .5s ease-out .75s;
+        /* it is used to place element initial state at the point from where animation should be starting */
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text{
+    &:link,
+    &:visited{
+        font-size: $default-fount-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition: all .2s;
+    }
+    &:hover{    
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.15);      /* x y blurr color */
+
+        transform: translateY(-2px);
+
+    }
+    &:active{                  /*clicked*/
+        transform: translateY(0);
+        box-shadow: 0 .5rem 2rem;      /* x y blurr color*/
+    }
+    
+}

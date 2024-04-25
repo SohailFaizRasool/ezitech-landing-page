@@ -40,6 +40,23 @@ body {
   font-weight: 400;
   margin-bottom: 4rem; }
 
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: inline-block;
+  color: #273044;
+  margin-bottom: 3rem; }
+
+.paragraph {
+  font-weight: 300;
+  margin-bottom: 3rem; }
+  .paragraph__sub {
+    font-weight: 700; }
+
+.heading-tertiary {
+  font-size: 3.5rem;
+  font-weight: 300; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -57,6 +74,9 @@ body {
 
 .u-margin-top-big {
   margin-top: 8rem !important; }
+
+.u-margin-top-small {
+  margin-top: 5rem !important; }
 
 .u-margin-top-huge {
   margin-top: 10rem !important; }
@@ -107,7 +127,23 @@ body {
   /*Background img from top always remain same if we resiz   || bottom, center    see in dev tools by changing values*/
   position: relative;
   /*As it parent to logo-box so that is position relative to this*/
-  /* This is used for curve live in header 75vh is given for responsivity */ }
+  /* This is used for curve live in header 75vh is given for responsivity */
+  filter: hue-rotate(-24deg); }
+  .header::after {
+    content: "";
+    background-size: cover;
+    /* what is the width of bg always try to fit in that*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, rgba(100, 159, 247, 0.5), rgba(100, 159, 247, 0.6)), url(../images/herotry.jpg);
+    /*two imges, and gradient is on top  img below */
+    filter: blur(2px);
+    /* Apply blur only to this pseudo-element */
+    z-index: -1;
+    /* Place the pseudo-element behind other content */ }
   .header__text-box {
     width: 73rem;
     /* centering the whole hadding */
@@ -119,8 +155,67 @@ body {
     text-align: center;
     /*As& is there in inline-block so it is treated as a normal text so this will centr it*/ }
 
+.btn, .btn:link, .btn:visited {
+  /*orugnal */
+  text-decoration: none;
+  padding: 1.5rem 3rem;
+  display: inline-block;
+  border-radius: 4px;
+  transition: all 0.2s;
+  /*THIS IS ALSO USED for animation*/
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  /*when hover*/
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  /* x y blurr color */ }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    /*1.5 times of actual after sudo element*/
+    opacity: 0; }
+
+.btn:active {
+  /*clicked*/
+  outline: none;
+  transform: translateY(-0.1rem);
+  box-shadow: 0 .5rem 2rem;
+  /* x y blurr color*/ }
+
+.btn--blue {
+  background: #042d89;
+  color: #fff; }
+
+.btn--animated {
+  animation: moveInBottom .5s ease-out .75s;
+  /* it is used to place element initial state at the point from where animation should be starting */
+  animation-fill-mode: backwards; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #326ec9;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #326ec9;
+  padding: 3px;
+  transition: all .2s; }
+
+.btn-text:hover {
+  background-color: #326ec9;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  /* x y blurr color */
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  /*clicked*/
+  transform: translateY(0);
+  box-shadow: 0 .5rem 2rem;
+  /* x y blurr color*/ }
+
 .bar {
-  width: 100vw;
+  width: 100%;
   padding: 1rem 11rem;
   background-color: #326ec9;
   color: #fff;
@@ -206,3 +301,20 @@ body {
   .brand__logo-3 {
     position: relative;
     top: -3.7rem; }
+
+.work {
+  text-align: center; }
+  .work__logo {
+    width: 20rem; }
+
+.section-award {
+  padding: 6rem 0;
+  text-align: left; }
+
+.award-img {
+  width: 34rem;
+  float: right; }
+
+.section-work {
+  padding: 4rem 0 6rem 0;
+  text-align: left; }
